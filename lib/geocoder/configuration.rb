@@ -51,6 +51,7 @@ module Geocoder
       :timeout,
       :lookup,
       :ip_lookup,
+      :use_real_ip,
       :language,
       :http_headers,
       :use_https,
@@ -94,6 +95,7 @@ module Geocoder
       @data[:timeout]      = 3           # geocoding service timeout (secs)
       @data[:lookup]       = :google     # name of street address geocoding service (symbol)
       @data[:ip_lookup]    = :freegeoip  # name of IP address geocoding service (symbol)
+      @data[:use_real_ip]  = true        # Use HTTP_X_REAL_IP for ip lookup
       @data[:language]     = :en         # ISO-639 language code
       @data[:http_headers] = {}          # HTTP headers for lookup
       @data[:use_https]    = false       # use HTTPS for lookup requests? (if supported)
